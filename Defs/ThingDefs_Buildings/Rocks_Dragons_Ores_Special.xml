@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--============================ Andrium ===============================-->
+
+  <ThingDef ParentName="RockBase">
+    <defName>MineableAndrium</defName>
+    <label>andrium ore</label>
+    <description>Rock containing bits of andrium.
+
+A very heavy, but sturdy material, that is spoken of in legend as being one of the most durable materials in the known universe. It is also known as one of the most volatile, where unprocessed Andrium will violently explode if put under too much stress. This volativity makes it very hard to work with, and its heavy weight makes it ill suited for anything that need to move, as well as protective armor. Its volatile nature makes it very valuable to those intending to weaponize the material, and could probably be used as an improvised explosive.
+
+Dedicated to: andrethegodkiller</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(46,25,25)</color> <!--#2e1919-->
+      <colorTwo>(115,12,14)</colorTwo> <!--#730c0e-->
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>5700</MaxHitPoints>
+    </statBases>
+	<scatterableOnMapGen>false</scatterableOnMapGen>
+    <building>
+		<isResourceRock>true</isResourceRock>
+		<mineableThing>Andrium</mineableThing>
+		<mineableYield>42</mineableYield>
+		<mineableScatterCommonality>0.01</mineableScatterCommonality>
+		<mineableScatterLumpSizeRange>8~26</mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+
+  <!--============================ Bananite ===============================-->
+
+  <ThingDef ParentName="RockBase">
+    <defName>MineableBananite</defName>
+    <label>bananite ore</label>
+    <description>Rock containing bits of bananite.
+
+Slippery to the touch, making it exceptional for use in anything that needs to move. This trait does make it rather useless for weapon crafting, as the slippery surface makes it harder to handle, and easy to drop by accident. The green sheen, from which this yellow ore gets its name, makes it a very pretty metal, and rich merchants might even make entire rooms out of this material, just to show off. This material will deteriorate if not stored properly, making it self-disintigrate if left unattended.
+
+Dedicated to: bananamove</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(255,234,0)</color> <!--#ffea00-->
+      <colorTwo>(193,234,10)</colorTwo> <!--#c1ea0a-->
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1200</MaxHitPoints>
+    </statBases>
+	<scatterableOnMapGen>false</scatterableOnMapGen>
+    <building>
+		<isResourceRock>true</isResourceRock>
+		<mineableThing>Bananite</mineableThing>
+		<mineableYield>136</mineableYield>
+		<mineableScatterCommonality>0.02</mineableScatterCommonality>
+		<mineableScatterLumpSizeRange>8~30</mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+  
+  <!--============================ Hampu ===============================-->
+
+  <ThingDef ParentName="RockBase">
+    <defName>MineableHampu</defName>
+    <label>hampu ore</label>
+    <description>Rock containing bits of hampu.
+
+An average metal, which if perceived at the right angle, gets a nice looking sheen to it.
+
+Dedicated to: TehTrueHamp</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(0,106,167)</color> <!--#006aa7-->
+      <colorTwo>(254,204,0)</colorTwo> <!--#fecc00-->
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1550</MaxHitPoints>
+    </statBases>
+	<scatterableOnMapGen>false</scatterableOnMapGen>
+    <building>
+		<isResourceRock>true</isResourceRock>
+		<mineableThing>Hampu</mineableThing>
+		<mineableYield>40</mineableYield>
+		<mineableScatterCommonality>0.07</mineableScatterCommonality>
+		<mineableScatterLumpSizeRange>24~36</mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+  
+  <!--============================ Muuhute ===============================-->
+
+  <ThingDef ParentName="RockBase">
+    <defName>MineableMuuhute</defName>
+    <label>muuhute ore</label>
+    <description>Rock containing bits of muuhute.
+
+Though fairly rare, Muuhute is quite sturdy, making it a decent choice for building walls. It provides decent blunt protection, but is otherwise quite average in its capabilities.
+
+Dedicated to: Muuhu</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(204,205,210)</color> <!--#cccdd2-->
+      <colorTwo>(47,48,66)</colorTwo> <!--#2f3042-->
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1800</MaxHitPoints>
+    </statBases>
+	<scatterableOnMapGen>false</scatterableOnMapGen>
+    <building>
+		<isResourceRock>true</isResourceRock>
+		<mineableThing>Muuhute</mineableThing>
+		<mineableYield>40</mineableYield>
+		<mineableScatterCommonality>0.07</mineableScatterCommonality>
+		<mineableScatterLumpSizeRange>24~36</mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>  
+
+  <!--============================ Sephim ===============================-->
+
+  <ThingDef ParentName="RockBase">
+    <defName>MineableSephim</defName>
+    <label>sephim ore</label>
+    <description>Rock containing bits of sephim.
+
+A very sought after material amongs warmongers, Sephim it excellent for use in sharp melee weapons, as its ability to retain a sharp edge, and light weight makes it deadly indeed. It can also be used to good effect in armor, providing excellent protection against piercing attacks. When unprocessed, Sephim can be used tactically to produce a smokescreen when damaged sufficiently.
+
+Dedicated to: SilverSephiroth</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(110,114,139)</color> <!--#6e728b-->
+      <colorTwo>(84,87,111)</colorTwo> <!--#54576f-->
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>3300</MaxHitPoints>
+    </statBases>
+	<scatterableOnMapGen>false</scatterableOnMapGen>
+    <building>
+		<isResourceRock>true</isResourceRock>
+		<mineableThing>Sephim</mineableThing>
+		<mineableYield>160</mineableYield>
+		<mineableScatterCommonality>0.05</mineableScatterCommonality>
+		<mineableScatterLumpSizeRange>15~32</mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+
+  <!--============================ Totote ===============================-->
+
+  <ThingDef ParentName="RockBase">
+    <defName>MineableTotote</defName>
+    <label>totote ore</label>
+    <description>Rock containing bits of totote.
+
+Totote is Totote. One feels well rested in its presence.
+
+Dedicated to: Toto</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(131,126,116)</color> <!--#837e74-->
+      <colorTwo>(156,204,184)</colorTwo> <!--#9cccb8-->
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1200</MaxHitPoints>
+    </statBases>
+	<scatterableOnMapGen>false</scatterableOnMapGen>
+    <building>
+		<isResourceRock>true</isResourceRock>
+		<mineableThing>Totote</mineableThing>
+		<mineableYield>30</mineableYield>
+		<mineableScatterCommonality>0.01</mineableScatterCommonality>
+		<mineableScatterLumpSizeRange>10~32</mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+
+  <!--============================ Cellfirium ===============================-->
+
+  <ThingDef ParentName="RockBase">
+    <defName>MineableCellfirium</defName>
+    <label>cellfirium ore</label>
+    <description>Rock containing bits of cellfirium.
+
+A very flammable ore that can be used as great cold insulation.
+
+Dedicated to: Cellfire</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(52,5,0)</color> <!--#340500-->
+      <colorTwo>(177,57,1)</colorTwo> <!--#b13901-->
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>2100</MaxHitPoints>
+    </statBases>
+	<scatterableOnMapGen>false</scatterableOnMapGen>
+    <building>
+		<isResourceRock>true</isResourceRock>
+		<mineableThing>Cellfirium</mineableThing>
+		<mineableYield>38</mineableYield>
+		<mineableScatterCommonality>0.06</mineableScatterCommonality>
+		<mineableScatterLumpSizeRange>16~30</mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+
+
+</Defs>

@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--============================ Andrium ===============================-->
+	
+  <ThingDef ParentName="ResourceBase">
+    <defName>Andrium</defName>
+    <label>andrium</label>
+    <description>A very heavy, but sturdy material, that is spoken of in legend as being one of the most durable materials in the known universe. It is also known as one of the most volatile, where unprocessed Andrium will violently explode if put under too much stress. This volativity makes it very hard to work with, and its heavy weight makes it ill suited for anything that need to move, as well as protective armor. Its volatile nature makes it very valuable to those intending to weaponize the material, and could probably be used as an improvised explosive.
+
+Dedicated to: andrethegodkiller</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Item/Resource/DOS_Andrium</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <statBases>
+      <MarketValue>2.2</MarketValue>
+      <MaxHitPoints>290</MaxHitPoints>
+      <Mass>1.8</Mass>
+      <StuffPower_Armor_Sharp>0.24</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.16</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>-0.1</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>0</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>-3</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1</BluntDamageMultiplier>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>1.2</explosiveRadius>
+        <explosiveDamageType>BombSuper</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.1</explosiveExpandPerStackcount>
+        <startWickHitPointsPercent>0.10</startWickHitPointsPercent>
+        <chanceToStartFire>0.22</chanceToStartFire>
+        <damageFalloff>true</damageFalloff>
+        <explosionSound>Explosion_GiantBomb</explosionSound>
+        <wickTicks>60~120</wickTicks>
+      </li>
+    </comps>
+    <useHitPoints>true</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <slagDef>ChunkSlagSteel</slagDef>
+    <thingCategories>
+      <li>DO_Metals</li>
+    </thingCategories>
+	<tradeability>Sellable</tradeability>
+    <deepCommonality>0.01</deepCommonality>
+    <deepCountPerPortion>14</deepCountPerPortion>
+    <deepLumpSizeRange>14~22</deepLumpSizeRange>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <commonality>0.01</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <color>(46,25,25)</color>
+      <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <statFactors>
+        <MaxHitPoints>2.9</MaxHitPoints>
+        <Beauty>-1</Beauty>
+        <Flammability>0</Flammability>
+		<WorkToMake>2.4</WorkToMake>
+        <WorkToBuild>2.4</WorkToBuild>
+        <DoorOpenSpeed>0.65</DoorOpenSpeed>
+        <MeleeWeapon_CooldownMultiplier>1.5</MeleeWeapon_CooldownMultiplier>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+  </ThingDef>
+  
+	<!--============================ Bananite ===============================-->
+	
+  <ThingDef ParentName="ResourceBase">
+    <defName>Bananite</defName>
+    <label>bananite</label>
+    <description>Slippery to the touch, making it exceptional for use in anything that needs to move. This trait does make it rather useless for weapon crafting, as the slippery surface makes it harder to handle, and easy to drop by accident. The green sheen, from which this yellow ore gets its name, makes it a very pretty metal, and rich merchants might even make entire rooms out of this material, just to show off. This material will deteriorate if not stored properly, making it self-disintigrate if left unattended.
+
+Dedicated to: bananamove</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/DOS_Bananite</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <statBases>
+      <MarketValue>0.15</MarketValue>
+      <MaxHitPoints>120</MaxHitPoints>
+      <RoyalFavorValue>0.008</RoyalFavorValue>
+      <Mass>0.008</Mass>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <StuffPower_Armor_Sharp>0.62</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.24</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>0</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>3</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>0.6</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.4</BluntDamageMultiplier>
+    </statBases>
+    <useHitPoints>true</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <slagDef>ChunkSlagSteel</slagDef>
+    <thingCategories>
+      <li>DO_Metals</li>
+    </thingCategories>
+    <smallVolume>true</smallVolume>
+	<tradeability>Sellable</tradeability>
+    <deepCommonality>0.02</deepCommonality>
+    <deepCountPerPortion>80</deepCountPerPortion>
+    <deepLumpSizeRange>22~36</deepLumpSizeRange>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <commonality>0.02</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <color>(255,225,0)</color>
+      <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <statOffsets>
+        <Beauty>7</Beauty>
+      </statOffsets>
+	  <statFactors>
+        <MaxHitPoints>0.8</MaxHitPoints>
+        <Beauty>2.2</Beauty>
+        <Flammability>0.3</Flammability>
+		<WorkToMake>2.6</WorkToMake>
+        <WorkToBuild>2.6</WorkToBuild>
+        <DoorOpenSpeed>1.7</DoorOpenSpeed>
+        <MeleeWeapon_CooldownMultiplier>1.1</MeleeWeapon_CooldownMultiplier>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+  </ThingDef>
+
+	<!--============================ Hampu ===============================-->
+	
+  <ThingDef ParentName="ResourceBase">
+    <defName>Hampu</defName>
+    <label>hampu</label>
+    <description>An average metal, which if perceived at the right angle, gets a nice looking sheen to it.
+
+Dedicated to: TehTrueHamp</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/DOS_Hampu</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <statBases>
+      <MarketValue>0.7</MarketValue>
+      <Mass>0.4</Mass>
+      <StuffPower_Armor_Sharp>0.92</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.48</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.67</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.98</BluntDamageMultiplier>
+    </statBases>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <slagDef>ChunkSlagSteel</slagDef>
+    <thingCategories>
+      <li>DO_Metals</li>
+    </thingCategories>
+	<tradeability>Sellable</tradeability>
+    <deepCommonality>0.07</deepCommonality>
+    <deepCountPerPortion>45</deepCountPerPortion>
+    <deepLumpSizeRange>30~40</deepLumpSizeRange>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <commonality>0.07</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <color>(8,77,117)</color>
+      <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <statFactors>
+        <MaxHitPoints>1</MaxHitPoints>
+        <Beauty>1</Beauty>
+        <Flammability>0.1</Flammability>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+  
+	<!--============================ Muuhute ===============================-->
+	
+  <ThingDef ParentName="ResourceBase">
+    <defName>Muuhute</defName>
+    <label>muuhute</label>
+    <description>Though fairly rare, Muuhute is quite sturdy, making it a decent choice for building walls. It provides decent blunt protection, but is otherwise quite average in its capabilities.
+
+Dedicated to: Muuhu</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/DOS_Muuhute</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <statBases>
+      <MarketValue>0.8</MarketValue>
+      <Mass>0.5</Mass>
+      <StuffPower_Armor_Sharp>0.74</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.64</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.54</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>0.98</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1</BluntDamageMultiplier>
+    </statBases>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <slagDef>ChunkSlagSteel</slagDef>
+    <thingCategories>
+      <li>DO_Metals</li>
+    </thingCategories>
+	<tradeability>Sellable</tradeability>
+    <deepCommonality>0.07</deepCommonality>
+    <deepCountPerPortion>45</deepCountPerPortion>
+    <deepLumpSizeRange>30~40</deepLumpSizeRange>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <commonality>0.07</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <color>(241,237,234)</color>
+      <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <statFactors>
+        <MaxHitPoints>1.6</MaxHitPoints>
+        <Beauty>0.6</Beauty>
+        <Flammability>0.1</Flammability>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+  
+	<!--============================ Sephium ===============================-->
+	
+  <ThingDef ParentName="ResourceBase">
+    <defName>Sephim</defName>
+    <label>sephim</label>
+    <description>A very sought after material amongs warmongers, Sephim it excellent for use in sharp melee weapons, as its ability to retain a sharp edge, and light weight makes it deadly indeed. It can also be used to good effect in armor, providing excellent protection against piercing attacks. When unprocessed, Sephim can be used tactically to produce a smokescreen when damaged sufficiently.
+
+Dedicated to: SilverSephiroth</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Item/Resource/DOS_Sephim</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <statBases>
+      <MarketValue>0.13</MarketValue>
+      <MaxHitPoints>140</MaxHitPoints>
+      <Mass>0.012</Mass>
+      <StuffPower_Armor_Sharp>1.28</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.40</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.48</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>0</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.3</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.6</BluntDamageMultiplier>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveDamageType>Smoke</explosiveDamageType>
+        <explosiveRadius>1.5</explosiveRadius>
+        <startWickHitPointsPercent>0.25</startWickHitPointsPercent>
+        <postExplosionSpawnThingDef>Gas_Smoke</postExplosionSpawnThingDef>
+        <postExplosionSpawnChance>1</postExplosionSpawnChance>
+        <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+        <wickTicks>30~60</wickTicks>
+      </li>
+    </comps>
+    <useHitPoints>true</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <slagDef>ChunkSlagSteel</slagDef>
+    <thingCategories>
+      <li>DO_Metals</li>
+    </thingCategories>
+	<tradeability>Sellable</tradeability>
+    <smallVolume>true</smallVolume>
+    <deepCommonality>0.05</deepCommonality>
+    <deepCountPerPortion>60</deepCountPerPortion>
+    <deepLumpSizeRange>22~34</deepLumpSizeRange>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <commonality>0.05</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <color>(168,172,184)</color>
+      <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <statFactors>
+        <MaxHitPoints>1.4</MaxHitPoints>
+        <Beauty>1.8</Beauty>
+        <Flammability>0</Flammability>
+		<WorkToMake>0.6</WorkToMake>
+        <WorkToBuild>1.2</WorkToBuild>
+        <MeleeWeapon_CooldownMultiplier>0.7</MeleeWeapon_CooldownMultiplier>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+  
+	<!--============================ Totote ===============================-->
+	
+  <ThingDef ParentName="ResourceBase">
+    <defName>Totote</defName>
+    <label>totote</label>
+    <description>Totote is Totote. One feels well rested in its presence.
+
+Dedicated to: Toto</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/DOS_Totote</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <statBases>
+      <MarketValue>0.69</MarketValue>
+      <Mass>0.8</Mass>
+      <StuffPower_Armor_Sharp>0.36</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.42</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.5</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>0</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>18</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>0.3</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.2</BluntDamageMultiplier>
+    </statBases>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <slagDef>ChunkSlagSteel</slagDef>
+    <thingCategories>
+      <li>DO_Metals</li>
+    </thingCategories>
+	<tradeability>Sellable</tradeability>
+    <deepCommonality>0.01</deepCommonality>
+    <deepCountPerPortion>30</deepCountPerPortion>
+    <deepLumpSizeRange>22~34</deepLumpSizeRange>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <commonality>0.01</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <color>(92,186,205)</color>
+      <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <statOffsets>
+        <Beauty>10</Beauty>
+      </statOffsets>
+	  <statFactors>
+        <MaxHitPoints>1.2</MaxHitPoints>
+        <Beauty>2.9</Beauty>
+		<WorkToMake>1.1</WorkToMake>
+        <WorkToBuild>1.1</WorkToBuild>
+        <BedRestEffectiveness>1.42</BedRestEffectiveness>
+        <Flammability>0.2</Flammability>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+
+	<!--============================ Cellfirium ===============================-->
+	
+  <ThingDef ParentName="ResourceBase">
+    <defName>Cellfirium</defName>
+    <label>cellfirium</label>
+    <description>A very flammable ore that can be used as great cold insulation.
+
+Dedicated to: Cellfire</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/DOS_Cellfirium</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <statBases>
+      <MarketValue>1.3</MarketValue>
+      <Mass>0.5</Mass>
+      <StuffPower_Armor_Sharp>0.36</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.24</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>22</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.1</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.64</BluntDamageMultiplier>
+    </statBases>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <slagDef>ChunkSlagSteel</slagDef>
+    <thingCategories>
+      <li>DO_Metals</li>
+    </thingCategories>
+	<tradeability>Sellable</tradeability>
+    <deepCommonality>0.06</deepCommonality>
+    <deepCountPerPortion>22</deepCountPerPortion>
+    <deepLumpSizeRange>20~34</deepLumpSizeRange>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <commonality>0.06</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <color>(250,154,11)</color>
+      <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <statFactors>
+        <MaxHitPoints>0.9</MaxHitPoints>
+        <Beauty>1</Beauty>
+        <Flammability>0.8</Flammability>
+      </statFactors>
+    </stuffProps>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+  
+</Defs>

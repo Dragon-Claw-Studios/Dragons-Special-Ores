@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+<Operation Class="XmlExtensions.CreateSettings">
+    <modId>DragonsSpecialOresOriginal</modId> <!--String that XML Extensions can identify your mod with-->
+    <label>Dragon's Special Ores</label>
+    <settings>
+	<li Class="XmlExtensions.Setting.Text">
+	    <text>Dragon's Special Ores</text>
+	    <font>Medium</font>
+	    <anchor>Middle</anchor>
+	</li>
+	<li Class="XmlExtensions.Setting.GapLine"/>
+	<li Class="XmlExtensions.Setting.SetColor">
+	    <color>(255,255,0)</color>
+	</li>
+	<li Class="XmlExtensions.Setting.Text">
+	    <text>Setting changes requires a restart to take effect!</text>
+	    <anchor>Middle</anchor>
+	</li>
+
+	<li Class="XmlExtensions.Setting.SetColor"/>
+	<!-- Settings - Flammability -->
+	<li Class="XmlExtensions.Setting.Gap"/>
+	<li Class="XmlExtensions.Setting.Checkbox">
+        <key>DOSNonFlammableOres</key>
+	    <defaultValue>false</defaultValue>
+        <label>Non Flammable Ores</label>
+	    <tKey>DragonsOres_DOSToggleFlammable</tKey>
+	    <tooltip>Sets flammability of all "Dragon's Special Ores" to 0, no more burning metal.</tooltip>
+	    <tKeyTip>DragonsOres_DOSToggleFlammableTip</tKeyTip>
+    </li>
+	<!-- Settings - Enable Ores -->
+	<li Class="XmlExtensions.Setting.Gap"/>
+	<li Class="XmlExtensions.Setting.Checkbox">
+        <key>ToggleAndrium</key>
+	    <defaultValue>true</defaultValue>
+        <label>Enable Andrium Generation</label>
+	    <tKey>DragonsSpecialOres_ToggleAndrium</tKey>
+	    <tooltip>Allows Andrium to generate and be functional.</tooltip>
+	    <tKeyTip>DragonsSpecialOres_ToggleAndriumTip</tKeyTip>
+    </li>
+	<li Class="XmlExtensions.Setting.Checkbox">
+        <key>ToggleBananite</key>
+	    <defaultValue>true</defaultValue>
+        <label>Enable Bananite Generation</label>
+	    <tKey>DragonsSpecialOres_ToggleBananite</tKey>
+	    <tooltip>Allows Bananite to generate and be functional.</tooltip>
+	    <tKeyTip>DragonsSpecialOres_ToggleBananiteTip</tKeyTip>
+	</li>
+	<li Class="XmlExtensions.Setting.Checkbox">
+        <key>ToggleHampu</key>
+	    <defaultValue>true</defaultValue>
+        <label>Enable Hampu Generation</label>
+	    <tKey>DragonsSpecialOres_ToggleHampu</tKey>
+	    <tooltip>Allows Hampu to generate and be functional.</tooltip>
+	    <tKeyTip>DragonsSpecialOres_ToggleHampuTip</tKeyTip>
+	</li>
+	<li Class="XmlExtensions.Setting.Checkbox">
+        <key>ToggleMuuhute</key>
+	    <defaultValue>true</defaultValue>
+        <label>Enable Muuhute Generation</label>
+	    <tKey>DragonsSpecialOres_ToggleMuuhute</tKey>
+	    <tooltip>Allows Muuhute to generate and be functional.</tooltip>
+	    <tKeyTip>DragonsSpecialOres_ToggleMuuhuteTip</tKeyTip>
+	</li>
+	<li Class="XmlExtensions.Setting.Checkbox">
+        <key>ToggleSephim</key>
+	    <defaultValue>true</defaultValue>
+        <label>Enable Sephim Generation</label>
+	    <tKey>DragonsSpecialOres_ToggleSephim</tKey>
+	    <tooltip>Allows Sephim to generate and be functional.</tooltip>
+	    <tKeyTip>DragonsSpecialOres_ToggleSephimTip</tKeyTip>
+	</li>
+	<li Class="XmlExtensions.Setting.Checkbox">
+        <key>ToggleTotote</key>
+	    <defaultValue>true</defaultValue>
+        <label>Enable Totote Generation</label>
+	    <tKey>DragonsSpecialOres_ToggleTotote</tKey>
+	    <tooltip>Allows Totote to generate and be functional.</tooltip>
+	    <tKeyTip>DragonsSpecialOres_ToggleTototeTip</tKeyTip>
+	</li>
+	<li Class="XmlExtensions.Setting.Checkbox">
+        <key>ToggleCellfirium</key>
+	    <defaultValue>true</defaultValue>
+        <label>Enable Cellfirium Generation</label>
+	    <tKey>DragonsSpecialOres_ToggleCellfirium</tKey>
+	    <tooltip>Allows Cellfirium to generate and be functional.</tooltip>
+	    <tKeyTip>DragonsSpecialOres_ToggleCellfiriumTip</tKeyTip>
+	</li>
+	<li Class="XmlExtensions.Setting.ResetSettings"/>
+    </settings>
+</Operation>
+
+	<!-- Patching - Flammability -->
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>DragonsSpecialOresOriginal</modId>
+    <key>DOSNonFlammableOres</key>
+    <defaultValue>false</defaultValue>
+    <caseTrue>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Andrium"]/stuffProps/statFactors/Flammability</xpath>
+			<value>
+				<Flammability>0</Flammability>
+			</value>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Bananite"]/stuffProps/statFactors/Flammability</xpath>
+			<value>
+				<Flammability>0</Flammability>
+			</value>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Hampu"]/stuffProps/statFactors/Flammability</xpath>
+			<value>
+				<Flammability>0</Flammability>
+			</value>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Muuhute"]/stuffProps/statFactors/Flammability</xpath>
+			<value>
+				<Flammability>0</Flammability>
+			</value>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Sephim"]/stuffProps/statFactors/Flammability</xpath>
+			<value>
+				<Flammability>0</Flammability>
+			</value>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Totote"]/stuffProps/statFactors/Flammability</xpath>
+			<value>
+				<Flammability>0</Flammability>
+			</value>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Cellfirium"]/stuffProps/statFactors/Flammability</xpath>
+			<value>
+				<Flammability>0</Flammability>
+			</value>
+		</Operation>
+	</caseTrue>
+</Operation>
+
+	<!-- Patching - Enable Ores -->
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>DragonsSpecialOresOriginal</modId>
+    <key>ToggleAndrium</key>
+    <defaultValue>true</defaultValue>
+    <caseFalse>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Andrium"]/statBases/MarketValue</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Andrium"]/stuffProps/commonality</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Andrium"]/deepCommonality</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Andrium"]/deepLumpSizeRange</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Andrium"]/stuffProps/categories</xpath>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Andrium"]/tradeability</xpath>
+			<value>
+				<tradeability>None</tradeability>
+			</value>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="MineableAndrium"]/building</xpath>
+			<value>
+				<building>
+					<isNaturalRock>false</isNaturalRock>
+					<claimable>false</claimable>
+				</building>
+			</value>
+		</Operation>
+	</caseFalse>
+</Operation>
+
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>DragonsSpecialOresOriginal</modId>
+    <key>ToggleBananite</key>
+    <defaultValue>true</defaultValue>
+    <caseFalse>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Bananite"]/statBases/MarketValue</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Bananite"]/stuffProps/commonality</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Bananite"]/deepCommonality</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Bananite"]/deepLumpSizeRange</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Bananite"]/stuffProps/categories</xpath>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Bananite"]/tradeability</xpath>
+			<value>
+				<tradeability>None</tradeability>
+			</value>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="MineableBananite"]/building</xpath>
+			<value>
+				<building>
+					<isNaturalRock>false</isNaturalRock>
+					<claimable>false</claimable>
+				</building>
+			</value>
+		</Operation>
+    </caseFalse>
+</Operation>
+
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>DragonsSpecialOresOriginal</modId>
+    <key>ToggleHampu</key>
+    <defaultValue>true</defaultValue>
+    <caseFalse>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Hampu"]/statBases/MarketValue</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Hampu"]/stuffProps/commonality</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Hampu"]/deepCommonality</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Hampu"]/deepLumpSizeRange</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Hampu"]/stuffProps/categories</xpath>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Hampu"]/tradeability</xpath>
+			<value>
+				<tradeability>None</tradeability>
+			</value>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="MineableHampu"]/building</xpath>
+			<value>
+				<building>
+					<isNaturalRock>false</isNaturalRock>
+					<claimable>false</claimable>
+				</building>
+			</value>
+		</Operation>
+    </caseFalse>
+</Operation>
+
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>DragonsSpecialOresOriginal</modId>
+    <key>ToggleMuuhute</key>
+    <defaultValue>true</defaultValue>
+    <caseFalse>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Muuhute"]/statBases/MarketValue</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Muuhute"]/stuffProps/commonality</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Muuhute"]/deepCommonality</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Muuhute"]/deepLumpSizeRange</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Muuhute"]/stuffProps/categories</xpath>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Muuhute"]/tradeability</xpath>
+			<value>
+				<tradeability>None</tradeability>
+			</value>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="MineableMuuhute"]/building</xpath>
+			<value>
+				<building>
+					<isNaturalRock>false</isNaturalRock>
+					<claimable>false</claimable>
+				</building>
+			</value>
+		</Operation>
+    </caseFalse>
+</Operation>
+
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>DragonsSpecialOresOriginal</modId>
+    <key>ToggleSephim</key>
+    <defaultValue>true</defaultValue>
+    <caseFalse>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Sephim"]/statBases/MarketValue</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Sephim"]/stuffProps/commonality</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Sephim"]/deepCommonality</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Sephim"]/deepLumpSizeRange</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Sephim"]/stuffProps/categories</xpath>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Sephim"]/tradeability</xpath>
+			<value>
+				<tradeability>None</tradeability>
+			</value>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="MineableSephim"]/building</xpath>
+			<value>
+				<building>
+					<isNaturalRock>false</isNaturalRock>
+					<claimable>false</claimable>
+				</building>
+			</value>
+		</Operation>
+    </caseFalse>
+</Operation>
+
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>DragonsSpecialOresOriginal</modId>
+    <key>ToggleTotote</key>
+    <defaultValue>true</defaultValue>
+    <caseFalse>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Totote"]/statBases/MarketValue</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Totote"]/stuffProps/commonality</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Totote"]/deepCommonality</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Totote"]/deepLumpSizeRange</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Totote"]/stuffProps/categories</xpath>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Totote"]/tradeability</xpath>
+			<value>
+				<tradeability>None</tradeability>
+			</value>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="MineableTotote"]/building</xpath>
+			<value>
+				<building>
+					<isNaturalRock>false</isNaturalRock>
+					<claimable>false</claimable>
+				</building>
+			</value>
+		</Operation>
+    </caseFalse>
+</Operation>
+
+<Operation Class="XmlExtensions.OptionalPatch">
+    <modId>DragonsSpecialOresOriginal</modId>
+    <key>ToggleCellfirium</key>
+    <defaultValue>true</defaultValue>
+    <caseFalse>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Cellfirium"]/statBases/MarketValue</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Cellfirium"]/stuffProps/commonality</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Cellfirium"]/deepCommonality</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Cellfirium"]/deepLumpSizeRange</xpath>
+		</Operation>
+		<Operation Class="PatchOperationRemove">
+			<xpath>/Defs/ThingDef[defName="Cellfirium"]/stuffProps/categories</xpath>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Cellfirium"]/tradeability</xpath>
+			<value>
+				<tradeability>None</tradeability>
+			</value>
+		</Operation>
+		<Operation Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="MineableCellfirium"]/building</xpath>
+			<value>
+				<building>
+					<isNaturalRock>false</isNaturalRock>
+					<claimable>false</claimable>
+				</building>
+			</value>
+		</Operation>
+    </caseFalse>
+</Operation>
+
+
+</Patch>
+
+
+
